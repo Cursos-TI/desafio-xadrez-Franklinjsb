@@ -10,10 +10,10 @@ int main() {
     int bispo = 5;
     int torre = 5;
     int rainha = 8;
-    int cavalo = 3;
+    int cavalo = 2;
     int b = 0;
     int r = 0; 
-    int c = 0;   
+    int passo_horizontal = 0;   
 
 
 
@@ -55,19 +55,26 @@ int main() {
     // Um loop pode representar a movimentação horizontal e outro vertical.
     printf("\n***Jogada do Cavalo***\n");
 
-    while (c < cavalo)
-    {
-      
-        for (c = 0; c < 2 ; c++)
+    
+        for (int passo_vertical = 0; passo_vertical < cavalo ; passo_vertical++)
         {
             printf("Baixo\n");
+            if (passo_vertical==1)
+            {
+                while (passo_horizontal<1)
+                {
+                     printf("Esquerda\n");
+                     passo_horizontal++;
+                }
+                
+            }
+            
         }
              
        
-       printf("Esquerda\n");
-       c++;
       
-    }
+      
+   
     
     
     // Nível Mestre - Funções Recursivas e Loops Aninhados
