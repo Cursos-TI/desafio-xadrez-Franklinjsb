@@ -71,8 +71,36 @@ int main() {
         
     }
              
-       
+    movertorre(torre);
+    moverbispo(bispo);
+    moverrainha(rainha);
+    moverbispomestre(bispo);
       
+    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
+    // Inclua o uso de continue e break dentro dos loops.
+    printf("\n***Jogada do Cavalo_Mestre***\n");
+
+    
+        for (int passo_mestre = 0; passo_mestre < cavalo ; passo_mestre++)
+        {   
+
+            for (int i = 0; i < 2; i++)
+            {
+                 printf("Cima\n");
+
+            }
+            
+                printf("Direita\n");
+                break;
+            
+        }
+             
+    // Recursividade e Loop Aninhado Bispo
+            
+       
+    
+    return 0;
+}  
     
     
     
@@ -170,33 +198,5 @@ int main() {
     
 
 
-    movertorre(torre);
-    moverbispo(bispo);
-    moverrainha(rainha);
-    moverbispomestre(bispo);
-   
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
-    printf("\n***Jogada do Cavalo_Mestre***\n");
-
     
-        for (int passo_mestre = 0; passo_mestre < cavalo ; passo_mestre++)
-        {   
-
-            for (int i = 0; i < 2; i++)
-            {
-                 printf("Cima\n");
-
-            }
-            
-                printf("Direita\n");
-                break;
-            
-        }
-             
-    // Recursividade e Loop Aninhado Bispo
-            
-       
     
-    return 0;
-}
