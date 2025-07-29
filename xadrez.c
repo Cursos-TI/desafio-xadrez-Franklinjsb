@@ -56,33 +56,147 @@ int main() {
     printf("\n***Jogada do Cavalo***\n");
 
     
-        for (int passo_vertical = 0; passo_vertical < cavalo ; passo_vertical++)
+    for (int passo_vertical = 0; passo_vertical < cavalo ; passo_vertical++)
+    {
+        printf("Baixo\n");
+        if (passo_vertical==1)
         {
-            printf("Baixo\n");
-            if (passo_vertical==1)
+            while (passo_horizontal<1)
             {
-                while (passo_horizontal<1)
-                {
-                     printf("Esquerda\n");
-                     passo_horizontal++;
-                }
-                
+                    printf("Esquerda\n");
+                    passo_horizontal++;
             }
             
         }
+        
+    }
              
        
       
-      
-   
+    
     
     
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    void movertorre(int casas_torre) {
 
+        
+        if (casas_torre>0)
+        {
+            if (casas_torre ==5)
+            {
+                printf("\n***Jogada da Torre_Recursiva***\n");
+
+            }
+            
+            printf("Direita\n");
+            movertorre(casas_torre-1);
+        }
+        
+        
+
+    }
+
+    
+
+    void moverbispo(int casas_bispo) {
+
+        
+        if (casas_bispo>0)
+        {
+            if (casas_bispo ==5)
+            {
+                printf("\n***Jogada do Bispo_Recursiva***\n");
+
+            }
+            
+            printf("Cima, Direita\n");
+            moverbispo(casas_bispo-1);
+        }
+        
+        
+
+    }
+
+    
+
+    void moverrainha(int casas_rainha) {
+
+        
+        if (casas_rainha>0)
+        {
+            if (casas_rainha ==8)
+            {
+                printf("\n***Jogada da Rainha_Recursiva***\n");
+
+            }
+            
+            printf("Esquerda\n");
+            moverrainha(casas_rainha-1);
+        }
+        
+        
+
+    }
+
+    void moverbispomestre(int casas_bispo_mestre) {
+
+            
+            if (casas_bispo_mestre>0)
+            {
+                if (casas_bispo_mestre==1||casas_bispo_mestre==3||casas_bispo_mestre==5)
+                {
+                     printf("Esquerda\n");
+                      if (casas_bispo_mestre ==5)
+                    {
+                        printf("\n***Jogada do Bispo_Recursiva_Mestre***\n");
+                        printf("Esquerda\n");
+                    }
+                }
+                else{
+                   
+                    for (int passo_interno = 0; passo_interno < 1; passo_interno++)
+                    {
+                        printf("Cima\n");
+                    }
+                    
+                }
+                moverbispomestre(casas_bispo_mestre-1);
+            }
+
+            
+    }
+    
+
+
+    movertorre(torre);
+    moverbispo(bispo);
+    moverrainha(rainha);
+    moverbispomestre(bispo);
+   
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
+    printf("\n***Jogada do Cavalo_Mestre***\n");
 
+    
+        for (int passo_mestre = 0; passo_mestre < cavalo ; passo_mestre++)
+        {   
+
+            for (int i = 0; i < 2; i++)
+            {
+                 printf("Cima\n");
+
+            }
+            
+                printf("Direita\n");
+                break;
+            
+        }
+             
+    // Recursividade e Loop Aninhado Bispo
+            
+       
+    
     return 0;
 }
